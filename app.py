@@ -25,7 +25,7 @@ from reportlab.lib.utils import ImageReader
 st.set_page_config(page_title="TMU Social Media Dashboard", layout="wide", page_icon="🟦")
 
 # ----------------------------- LOGO -----------------------------
-logo_path = "assets/tmu_logo.png"  # Place your logo here
+logo_path = "tmu_logo.png"  # Place your logo here
 st.sidebar.image(logo_path, use_column_width=True)
 
 st.title("TMU Social Media Analytics Dashboard")
