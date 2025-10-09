@@ -27,7 +27,7 @@ st.set_page_config(page_title="TMU Social Media Dashboard", layout="wide")
 # Logo at top-left
 logo_col, title_col = st.columns([1, 9])
 with logo_col:
-    st.image("assets/logo.png", width=80)  # replace with your logo path
+    st.image("logo.png", width=80)  # replace with your logo path
 with title_col:
     st.title("TMU Social Media Analytics Dashboard")
 
