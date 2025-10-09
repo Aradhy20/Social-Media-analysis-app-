@@ -1,3 +1,8 @@
+plotly
+matplotlib
+seaborn
+python-pptx
+kaleido
 fastapi
 uvicorn
 duckdb
@@ -6,10 +11,5 @@ streamlit
 requests
 lightgbm
 scikit-learn
-plotly
-matplotlib
-seaborn
-python-pptx
-kaleido
 prophet
 shap
