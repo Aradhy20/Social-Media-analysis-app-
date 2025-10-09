@@ -54,16 +54,22 @@ tabs = st.tabs([
     "Forecast", "Clustering", "Export"
 ])
 
+# Updated Upload Tab for multiple files
 with tabs[0]:
-    st.header("CSV Upload")
-    uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
-    if uploaded_file:
-        resp = requests.post("http://backend:8000/upload/", files={'file': uploaded_file})
-        data = resp.json()
-        if "rows" in data:
-            st.success(f"Uploaded {data['rows']} rows!")
-        else:
-            st.error(data.get("error", "Upload failed."))
+    st.header("CSV Upload - Multiple Files Supported")
+    uploaded_files = st.file_uploader(
+        "Upload one or more CSV files",
+        type=["csv"],
+        accept_multiple_files=True
+    )
+    if uploaded_files:
+        for uploaded_file in uploaded_files:
+            resp = requests.post("http://backend:8000/upload/", files={'file': uploaded_file})
+            data = resp.json()
+            if "rows" in data:
+                st.success(f"Uploaded {uploaded_file.name}: {data['rows']} rows")
+            else:
+                st.error(f"Error uploading {uploaded_file.name}: {data.get('error', 'Unknown error')}")
 
 with tabs[1]:
     st.header("Data Preview")
