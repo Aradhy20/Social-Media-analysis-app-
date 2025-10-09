@@ -25,7 +25,7 @@ from scipy import stats
 st.set_page_config(page_title="TMU Social Media Dashboard", layout="wide")
 
 # ----------------------------- LOGO -----------------------------
-logo = Image.open("logo.png")
+logo = Image.open("tmu_logo.png")
 st.sidebar.image(logo, width=150)
 
 st.title("TMU Social Media Analytics Dashboard")
