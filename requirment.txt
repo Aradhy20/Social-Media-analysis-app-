@@ -14,3 +14,4 @@ kaleido
 prophet
 shap
 scikit-learn
+plotly
