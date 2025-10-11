@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+duckdb
+pandas
+streamlit
+requests
+lightgbm
+scikit-learn
+plotly
+matplotlib
+seaborn
+python-pptx
+kaleido
+prophet
+shap
+scikit-learn
